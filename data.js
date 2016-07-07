@@ -7,9 +7,7 @@ window.data = [{
   color: "brown",
   housePrice: 50
 },{
-  name: "Income Tax",
-  amount: 200,
-  type: "tax"
+  name: "Income Tax"
 },{
   name: "Whitechapel Road",
   price: 60,
@@ -158,6 +156,8 @@ window.data = [{
   rental: [35, 175, 500, 1100, 1300, 1500],
   color: "dark blue",
   housePrice: 200
+},{
+  name: "Super Tax"
 },{
   name: "Mayfair",
   price: 400,
