@@ -13,7 +13,8 @@ window.data = [{
 },{
   name: "Kings Cross Station",
   price: 200,
-  rental: [25, 50, 100, 200]
+  rental: [25, 50, 100, 200],
+  type: "station"
 },{
   name: "The Angel, Islington",
   price: 100,
@@ -40,7 +41,8 @@ window.data = [{
   housePrice: 100
 },{
   name: "Electric Company",
-  price: 150
+  price: 150,
+  type: "utility"
 },{
   name: "Whitehall",
   price: 140,
@@ -56,7 +58,8 @@ window.data = [{
 },{
   name: "Marylebone Station",
   price: 200,
-  rental: [25, 50, 100, 200]
+  rental: [25, 50, 100, 200],
+  type: "station"
 },{
   name: "Bow Steet",
   price: 180,
@@ -94,11 +97,20 @@ window.data = [{
   color: "red",
   housePrice: 150
 },{
+  name: "Fenchurch Street Station",
+  price: 200,
+  rental: [25, 50, 100, 200],
+  type: "station"
+},{
   name: "Leicester Square",
   price: 300,
   rental: [22, 110, 330, 800, 975, 1150],
   color: "yellow",
   housePrice: 150
+},{
+  name: "Water Works",
+  price: 150,
+  type: "utility"
 },{
   name: "Coventry Street",
   price: 300,
@@ -123,6 +135,11 @@ window.data = [{
   rental: [26, 130, 390, 900, 1100, 1275],
   color: "green",
   housePrice: 150
+},{
+  name: "Liverpool Street Station",
+  price: 200,
+  rental: [25, 50, 100, 200],
+  type: "station"
 },{
   name: "Bond Street",
   price: 400,
