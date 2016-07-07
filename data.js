@@ -1,9 +1,15 @@
 window.data = [{
+  name: "Go"
+},{
   name: "Old Kent Road",
   price: 60,
   rental: [2, 10, 30, 90, 160, 250],
   color: "brown",
   housePrice: 50
+},{
+  name: "Income Tax",
+  amount: 200,
+  type: "tax"
 },{
   name: "Whitechapel Road",
   price: 60,
