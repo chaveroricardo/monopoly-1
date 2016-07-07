@@ -7,13 +7,15 @@ window.data = [{
   color: "brown",
   housePrice: 50
 },{
-  name: "Income Tax"
+  name: "Community Chest"
 },{
   name: "Whitechapel Road",
   price: 60,
   rental: [4, 20, 60, 180, 360, 450],
   color: "brown",
   housePrice: 50
+},{
+  name: "Income Tax"
 },{
   name: "Kings Cross Station",
   price: 200,
@@ -26,6 +28,8 @@ window.data = [{
   color: "lightBlue",
   housePrice: 50
 },{
+  name: "Chance"
+},{
   name: "Euston Road",
   price: 100,
   rental: [6, 30, 90, 270, 400, 550],
@@ -37,6 +41,8 @@ window.data = [{
   rental: [8, 40, 100, 300, 450, 600],
   color: "lightBlue",
   housePrice: 50
+},{
+  name: "Jail"
 },{
   name: "Pall Mall",
   price: 140,
@@ -71,6 +77,8 @@ window.data = [{
   color: "orange",
   housePrice: 100
 },{
+  name: "Community Chest"
+},{
   name: "Marlborough Steet",
   price: 180,
   rental: [14, 70, 200, 550, 750, 950],
@@ -83,11 +91,15 @@ window.data = [{
   color: "orange",
   housePrice: 100
 },{
+  name: "Free Parking"
+},{
   name: "The Strand",
   price: 220,
   rental: [18, 90, 250, 700, 875, 1050],
   color: "red",
   housePrice: 150
+},{
+  name: "Chance"
 },{
   name: "Fleet Street",
   price: 220,
@@ -140,16 +152,20 @@ window.data = [{
   color: "green",
   housePrice: 150
 },{
-  name: "Liverpool Street Station",
-  price: 200,
-  rental: [25, 50, 100, 200],
-  type: "station"
+  name: "Comminity Chest"
 },{
   name: "Bond Street",
   price: 400,
   rental: [28, 150, 450, 1000, 1200, 1400]
   color: "dark blue",
   housePrice: 200
+},{
+  name: "Liverpool Street Station",
+  price: 200,
+  rental: [25, 50, 100, 200],
+  type: "station"
+},{
+  name: "Chance"
 },{
   name: "Park Lane",
   price: 350,

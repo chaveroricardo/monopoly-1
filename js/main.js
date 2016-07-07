@@ -1,5 +1,3 @@
-$(function(){
-  console.log("js loaded");
+var pieces = ["dog","car","boat","hat","iron","cat","boot"];
 
-  var pieces = ["dog","car","boat","hat","iron","cat","boot"];
-});
+var players = [new Player(), new Player()];
