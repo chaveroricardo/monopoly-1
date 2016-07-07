@@ -3,6 +3,7 @@ function Player(piece) {
   this.square = 0;
   this.money = 1500;
   this.inJail = false;
+  this.properties = [];
 }
 
 Player.prototype.move = function() {
@@ -11,4 +12,6 @@ Player.prototype.move = function() {
   if(this.square > 39) {
     this.square = this.square%40;
   }
+
+  return this;
 }

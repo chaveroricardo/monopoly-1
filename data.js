@@ -5,7 +5,8 @@ window.data = [{
   price: 60,
   rental: [2, 10, 30, 90, 160, 250],
   color: "brown",
-  housePrice: 50
+  housePrice: 50,
+  type: "property"
 },{
   name: "Community Chest"
 },{
@@ -13,7 +14,8 @@ window.data = [{
   price: 60,
   rental: [4, 20, 60, 180, 360, 450],
   color: "brown",
-  housePrice: 50
+  housePrice: 50,
+  type: "property"
 },{
   name: "Income Tax"
 },{
@@ -26,7 +28,8 @@ window.data = [{
   price: 100,
   rental: [6, 30, 90, 270, 400, 550],
   color: "lightBlue",
-  housePrice: 50
+  housePrice: 50,
+  type: "property"
 },{
   name: "Chance"
 },{
@@ -34,13 +37,15 @@ window.data = [{
   price: 100,
   rental: [6, 30, 90, 270, 400, 550],
   color: "lightBlue",
-  housePrice: 50
+  housePrice: 50,
+  type: "property"
 },{
   name: "Pentonville Road",
   price: 120,
   rental: [8, 40, 100, 300, 450, 600],
   color: "lightBlue",
-  housePrice: 50
+  housePrice: 50,
+  type: "property"
 },{
   name: "Jail"
 },{
@@ -48,7 +53,8 @@ window.data = [{
   price: 140,
   rental: [10, 50, 150, 450, 625, 750],
   color: "pink",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Electric Company",
   price: 150,
@@ -58,13 +64,15 @@ window.data = [{
   price: 140,
   rental: [10, 50, 150, 450, 625, 750],
   color: "pink",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Northumberland Avenue",
   price: 160,
   rental: [12, 60, 180, 500, 700, 900],
   color: "pink",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Marylebone Station",
   price: 200,
@@ -75,7 +83,8 @@ window.data = [{
   price: 180,
   rental: [14, 70, 200, 550, 750, 950],
   color: "orange",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Community Chest"
 },{
@@ -83,13 +92,15 @@ window.data = [{
   price: 180,
   rental: [14, 70, 200, 550, 750, 950],
   color: "orange",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Vine Steet",
   price: 200,
   rental: [16, 80, 220, 600, 800, 1000],
   color: "orange",
-  housePrice: 100
+  housePrice: 100,
+  type: "property"
 },{
   name: "Free Parking"
 },{
@@ -97,7 +108,8 @@ window.data = [{
   price: 220,
   rental: [18, 90, 250, 700, 875, 1050],
   color: "red",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Chance"
 },{
@@ -105,13 +117,15 @@ window.data = [{
   price: 220,
   rental: [18, 90, 250, 700, 875, 1050],
   color: "red",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Trafalgar Square",
   price: 240,
   rental: [20, 100, 300, 750, 925, 1100],
   color: "red",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Fenchurch Street Station",
   price: 200,
@@ -122,7 +136,8 @@ window.data = [{
   price: 300,
   rental: [22, 110, 330, 800, 975, 1150],
   color: "yellow",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Water Works",
   price: 150,
@@ -132,33 +147,38 @@ window.data = [{
   price: 300,
   rental: [22, 110, 330, 800, 975, 1150],
   color: "yellow",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Piccadilly",
   price: 300,
   rental: [22, 120, 360, 850, 1025, 1200],
   color: "yellow",
-  housePrice: 140
+  housePrice: 140,
+  type: "property"
 },{
   name: "Regent Street",
   price: 400,
   rental: [26, 130, 390, 900, 1100, 1275],
   color: "green",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Oxford Street",
   price: 400,
   rental: [26, 130, 390, 900, 1100, 1275],
   color: "green",
-  housePrice: 150
+  housePrice: 150,
+  type: "property"
 },{
   name: "Comminity Chest"
 },{
   name: "Bond Street",
   price: 400,
-  rental: [28, 150, 450, 1000, 1200, 1400]
+  rental: [28, 150, 450, 1000, 1200, 1400],
   color: "dark blue",
-  housePrice: 200
+  housePrice: 200,
+  type: "property"
 },{
   name: "Liverpool Street Station",
   price: 200,
@@ -171,7 +191,8 @@ window.data = [{
   price: 350,
   rental: [35, 175, 500, 1100, 1300, 1500],
   color: "dark blue",
-  housePrice: 200
+  housePrice: 200,
+  type: "property"
 },{
   name: "Super Tax"
 },{
@@ -179,5 +200,6 @@ window.data = [{
   price: 400,
   rental: [50, 200, 600, 1400, 1700, 2000],
   color: "dark blue",
-  housePrice: 200
+  housePrice: 200,
+  type: "property"
 }]
