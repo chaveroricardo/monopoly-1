@@ -11,6 +11,10 @@ window.data = [{
   color: "brown",
   housePrice: 50
 },{
+  name: "Kings Cross Station",
+  price: 200,
+  rental: [25, 50, 100, 200]
+},{
   name: "The Angel, Islington",
   price: 100,
   rental: [6, 30, 90, 270, 400, 550],
@@ -35,6 +39,9 @@ window.data = [{
   color: "pink",
   housePrice: 100
 },{
+  name: "Electric Company",
+  price: 150
+},{
   name: "Whitehall",
   price: 140,
   rental: [10, 50, 150, 450, 625, 750],
@@ -46,6 +53,10 @@ window.data = [{
   rental: [12, 60, 180, 500, 700, 900],
   color: "pink",
   housePrice: 100
+},{
+  name: "Marylebone Station",
+  price: 200,
+  rental: [25, 50, 100, 200]
 },{
   name: "Bow Steet",
   price: 180,
