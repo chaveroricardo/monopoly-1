@@ -7,6 +7,12 @@ function Property(price, rental, color) {
   this.isMortgaged = false;
 }
 
+Object.defineProperty(Property.prototype, "rent", {
+  get: function getRent() {
+    return this.rental[this.houses];
+  }
+});
+
 Property.prototype.mortgage = function() {
   this.mortgage = true;
   return true;
