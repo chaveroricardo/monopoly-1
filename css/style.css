@@ -102,61 +102,94 @@ body {
 
 .square:nth-of-type(12) {
   bottom: 130px;
-  left: 23px;
+  right: 1135px;
   position: absolute;
   -ms-transform: rotate(90deg); /* IE 9 */
      -webkit-transform: rotate(90deg); /* Safari */
      transform: rotate(90deg);
 }
-/*.square:nth-of-type(12) {
-  left: 60px;
-  top: 580px;
-}
 
 .square:nth-of-type(13) {
-  left: 60px;
-  top: 520px;
+  bottom: 236px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(14) {
-  left: 60px;
-  top: 460px;
+  bottom: 342px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(15) {
-  left: 60px;
-  top: 400px;
+  bottom: 448px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(16) {
-  left: 60px;
-  top: 340px;
+  bottom: 554px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(17) {
-  left: 60px;
-  top: 280px;
+  bottom: 660px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(18) {
-  left: 60px;
-  top: 220px;
+  bottom: 766px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(19) {
-  left: 60px;
-  top: 160px;
+  bottom: 872px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(20) {
-  left: 60px;
-  top: 100px;
+  bottom: 978px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
 }
 
 .square:nth-of-type(21) {
-  left: 60px;
-  top: 40px;
-}*/
+  bottom: 1084px;
+  right: 1135px;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+     -webkit-transform: rotate(90deg); /* Safari */
+     transform: rotate(90deg);
+}
+
 
 /* Top row */
 
