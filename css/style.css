@@ -103,6 +103,34 @@ body {
   background-position: center 65%;
 }
 
+.chance {
+  background-image: url(/images/chance.gif);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center 75%;
+}
+
+.community-chest {
+  background-image: url(/images/community-chest.gif);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center 75%;
+}
+
+.electric-company {
+  background-image: url(/images/electric-company.gif);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center 65%;
+}
+
+.water-works {
+  background-image: url(/images/water-works.gif);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center 60%;
+}
+
 i {
   display: block;
   position: relative;
