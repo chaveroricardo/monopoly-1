@@ -34,6 +34,7 @@ body {
 }
 
 .square.corner h3 {
+  font-size: 21px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,13 +42,13 @@ body {
   margin: 0;
 }
 
-.property h3 {
+.square h3 {
   margin: 10px 0;
   padding: 0 5px;
   font-size: 12px;
 }
 
-.property h4 {
+.square h4 {
   margin: 10px 0;
   padding: 0 5px;
   font-size: 10px;
@@ -93,6 +94,13 @@ body {
 
 .property.dark-blue:before {
   background-color: rgb(0,114,187);
+}
+
+.station {
+  background-image: url(/images/station.gif);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center 65%;
 }
 
 i {
