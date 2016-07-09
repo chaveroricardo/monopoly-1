@@ -60,24 +60,30 @@ function movePlayer(player) {
 }
 
 
-function createBoard(){
-  var firstLine = 1100;
-  var secondLine = 900;
-  var thirdLine = 100;
-  for (var i = 0; i < 11; i++) {
-    document.getElementsByClassName("square")[i].setAttribute("style", "left: "+ firstLine +"px");
-    firstLine -= 100;
-  }
+// function createBoard(){
+//   var firstLine = 1100;
+//   var secondLine = 900;
+//   var thirdLine = 300;
+//   var fourthLine = 0;
+//   for (var i = 0; i < 11; i++) {
+//     document.getElementsByClassName("square")[i].setAttribute("style", "left: "+ firstLine +"px");
+//     firstLine -= 100;
+//   }
 
-  for (var j = 11; j < 21; j++) {
-    document.getElementsByClassName("square")[j].setAttribute("style", "top: "+ secondLine +"px");
-    secondLine -= 100;
-  }
+//   for (var j = 11; j < 21; j++) {
+//     document.getElementsByClassName("square")[j].setAttribute("style", "top: "+ secondLine +"px");
+//     secondLine -= 100;
+//   }
 
-  for (var k = 21; k < 31; k++) {
-    document.getElementsByClassName("square")[k].setAttribute("style", "left: "+ thirdLine +"px");
-    thirdLine += 100;
-  }
-}
+//   // for (var k = 21; k < 30; k++) {
+//   //   document.getElementsByClassName("square")[k].setAttribute("style", "left: "+ thirdLine +"px");
+//   //   thirdLine += 100;
+//   // }
 
-createBoard();
+//   // for (var l = 32; l < 39; l++) {
+//   //   document.getElementsByClassName("square")[l].setAttribute("style", "top: "+ thirdLine +"px");
+//   //   fourthLine += 100;
+//   // }
+// }
+
+// createBoard();
