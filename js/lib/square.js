@@ -2,7 +2,7 @@ function Square(name, type, property) {
   this.name = name;
   this.type = type;
 
-  if(type === "property") {
+  if(["property", "station", "utility"].indexOf(type) !== -1) {
     this.property = property;
   }
 }

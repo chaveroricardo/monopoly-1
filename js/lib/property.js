@@ -1,10 +1,12 @@
-function Property(price, rental, color) {
+function Property(price, rental, color, numberInSet, housePrice) {
   this.price = parseFloat(price);
   this.rental = rental;
   this.color = color;
+  this.numberInSet = numberInSet;
   this.houses = 0;
   this.owner = null;
   this.isMortgaged = false;
+  this.housePrice = housePrice;
 }
 
 Object.defineProperty(Property.prototype, "rent", {
@@ -28,9 +30,18 @@ Property.prototype.buy = function(player) {
   return true;
 }
 
+Object.defineProperty(Property.prototype, "canBuildHouses", {
+  get: function canBuildHouses() {
+    return this.owner.properties.filter(function(property) {
+      return property.color === this.color;
+    }) === this.numberInSet;
+  }
+});
+
 Property.prototype.addHouse = function() {
-  if(this.houses < 5) {
+  if(this.canBuildHouses && this.houses < 5 && this.money >= this.housePrice) {
     this.houses++;
+    this.money -= this.housePrice;
     return this.houses;
   }
   return false;

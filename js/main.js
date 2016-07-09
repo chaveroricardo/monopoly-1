@@ -1,9 +1,17 @@
 var pieces = ["dog","car","boat","hat","iron","cat","boot"];
 var squares = data.map(function(dataObj) {
-  var square = new Square(dataObj.name, dataObj.type);
+  var square = new Square(dataObj.name, dataObj.type || "misc");
 
   if(dataObj.type === "property") {
-    square.property = new Property(dataObj.price, dataObj.rental, dataObj.color);
+    square.property = new Property(dataObj.price, dataObj.rental, dataObj.color, dataObj.numberInSet, dataObj.housePrice);
+  }
+
+  if(dataObj.type === "station") {
+    square.property = new Station();
+  }
+
+  if(dataObj.type === "utility") {
+    square.property = new Utility();
   }
 
   return square;
@@ -19,8 +27,9 @@ function movePlayer(player) {
 
   if(square.property && !square.property.owner) {
     
-    console.log("Property is unowned... purchasing...");
-    player.purchase(square.property);
+    if(confirm(square.name + " is unowned... Would you like to buy for £" + square.property.price + "?")) {
+      player.purchase(square.property);
+    }
 
   } else if(square.property && square.property.owner !== player) {
 
@@ -28,15 +37,9 @@ function movePlayer(player) {
     console.log("Property has " + square.property.houses + ", rent is: £" + square.property.rent);
     console.log("Paying rent to " + square.property.owner.piece);
 
-    if(player.money - square.property.rent <= 0) {
-      player.money = 0;
+    player.payRent(square.property);
 
-      // TO DO... allow player to mortgage property, sell houses, make deal etc
-      console.log("Game over... " + player.piece + " is bankrupt");
-      square.property.owner.money += player.money;
-    }
-    player.money -= square.property.rent;
-    square.property.owner.money += square.property.rent;
-
+  } else if(square.type === 'tax') {
+    player.money -= square.amount;
   }
 }

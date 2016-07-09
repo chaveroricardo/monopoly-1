@@ -17,7 +17,9 @@ window.data = [{
   housePrice: 50,
   type: "property"
 },{
-  name: "Income Tax"
+  name: "Income Tax",
+  type: "tax",
+  amount: 200
 },{
   name: "Kings Cross Station",
   price: 200,
@@ -157,6 +159,8 @@ window.data = [{
   housePrice: 140,
   type: "property"
 },{
+  name: "Go To Jail",
+},{
   name: "Regent Street",
   price: 400,
   rental: [26, 130, 390, 900, 1100, 1275],
@@ -194,7 +198,9 @@ window.data = [{
   housePrice: 200,
   type: "property"
 },{
-  name: "Super Tax"
+  name: "Super Tax",
+  type: "tax",
+  amount: 100
 },{
   name: "Mayfair",
   price: 400,
