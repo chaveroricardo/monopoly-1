@@ -15,55 +15,98 @@ body {
 #board {
   width: 1000px;
   margin: 0 auto;
+  background-color: rgb(205,230,208);
 }
 
-#test .square {
+.square {
   width: 100px;
   height: 150px;
   border: 3px solid black;
   display: inline-block;
+  vertical-align: top;
   text-transform: uppercase;
   text-align: center;
   position: relative;
 }
 
-#test .property h3 {
-  margin: 10px 0;
-  font-size: 14px;
+.square.corner {
+  width: 150px;
 }
 
-#test .property h4 {
+.square.corner h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+  margin: 0;
+}
+
+.property h3 {
   margin: 10px 0;
+  padding: 0 5px;
   font-size: 12px;
+}
+
+.property h4 {
+  margin: 10px 0;
+  padding: 0 5px;
+  font-size: 10px;
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 
-#test .property:before {
+.property:before {
   content: '';
   display: block;
   height: 20%;
   border-bottom: 3px solid black;
 }
 
-#test .property.brown:before {
+.property.brown:before {
   background-color: rgb(149,84,54);
 }
 
-#test i {
-  display: block;
-  position: relative;
-  box-shadow: 1px 2px 10px 2px rgba(0,0,0,0.45);
+.property.light-blue:before {
+  background-color: rgb(170,224,250);
 }
 
-#test i:before {
+.property.pink:before {
+  background-color: rgb(217,58,150);
+}
+
+.property.orange:before {
+  background-color: rgb(247,148,29);
+}
+
+.property.red:before {
+  background-color: rgb(231,26,35);
+}
+
+.property.yellow:before {
+  background-color: rgb(254,242,0);
+}
+
+.property.green:before {
+  background-color: rgb(31,178,90);
+}
+
+.property.dark-blue:before {
+  background-color: rgb(0,114,187);
+}
+
+i {
+  display: block;
+  position: relative;
+}
+
+i:before {
   content: '';
   display: block;
   height: 50%;
 }
 
-#test i:after {
+i:after {
   content: '';
   display: block;
   position: absolute;
@@ -71,38 +114,38 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  box-shadow: 2px 3px 8px 1px rgba(0,0,0,0.45);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
 }
 
-#test i.house {
+i.house {
   background-color: rgb(62,163,99);
   width: 40px;
   height: 25px;
 }
 
-#test i.house:before {
+i.house:before {
   background-color: rgb(36,109,63);
   background-image: linear-gradient(rgb(36,109,63), rgb(52,143,89));
 }
 
-#test i.house:after {
+i.house:after {
   height: 8px;
   width: 8px;
   background-color: rgb(62,163,99);
 }
 
-#test i.hotel {
+i.hotel {
   background-color: rgb(245,76,72);
   width: 50px;
   height: 30px;
 }
 
-#test i.hotel:before {
+i.hotel:before {
   background-color: rgb(188,43,46);
   background-image: linear-gradient(rgb(188,43,46), rgb(232,53,69));
 }
 
-#test i.hotel:after {
+i.hotel:after {
   height: 10px;
   width: 10px;
   background-color: rgb(245,76,72);
