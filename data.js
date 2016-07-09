@@ -180,7 +180,7 @@ window.data = [{
   name: "Bond Street",
   price: 400,
   rental: [28, 150, 450, 1000, 1200, 1400],
-  color: "dark blue",
+  color: "green",
   housePrice: 200,
   type: "property"
 },{
@@ -194,7 +194,7 @@ window.data = [{
   name: "Park Lane",
   price: 350,
   rental: [35, 175, 500, 1100, 1300, 1500],
-  color: "dark blue",
+  color: "darkBlue",
   housePrice: 200,
   type: "property"
 },{
@@ -205,7 +205,7 @@ window.data = [{
   name: "Mayfair",
   price: 400,
   rental: [50, 200, 600, 1400, 1700, 2000],
-  color: "dark blue",
+  color: "darkBlue",
   housePrice: 200,
   type: "property"
 }]
