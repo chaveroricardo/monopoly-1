@@ -11,6 +11,8 @@ Player.prototype.move = function() {
   this.lastDiceRoll = Math.ceil(Math.random() * 11) + 1;
   this.square += this.lastDiceRoll;
 
+  if(this.square.name === "Go to Jail")
+
   if(this.square > 39) {
     this.square = this.square%40;
     this.money += 200; // player has passed go
