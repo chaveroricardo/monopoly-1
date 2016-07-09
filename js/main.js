@@ -1,4 +1,5 @@
 var pieces = ["dog","car","boat","hat","iron","cat","boot"];
+
 var squares = data.map(function(dataObj) {
   var square = new Square(dataObj.name, dataObj.type || "misc");
 
@@ -14,6 +15,10 @@ var squares = data.map(function(dataObj) {
     square.property = new Utility();
   }
 
+  if(dataObj.type === "tax") {
+    square.amount = dataObj.amount;
+  }
+
   return square;
 });
 
@@ -27,17 +32,27 @@ function movePlayer(player) {
 
   if(square.property && !square.property.owner) {
     
-    if(confirm(square.name + " is unowned... Would you like to buy for £" + square.property.price + "?")) {
-      player.purchase(square.property);
+    if(confirm(square.name + " is unowned... Would you like to buy for \u00A3" + square.property.price + "?")) {
+      if(player.purchase(square.property)) {
+        console.log(square.name + " purchased");
+      } else {
+        console.log(player.piece + " was unable to buy " + square.name);
+      }
     }
 
   } else if(square.property && square.property.owner !== player) {
 
-    console.log("Property is owned by " + square.property.owner.piece);
-    console.log("Property has " + square.property.houses + ", rent is: £" + square.property.rent);
-    console.log("Paying rent to " + square.property.owner.piece);
+    if(square.property.isMortgaged) {
+      console.log("Property is mortgaged. No rent to play");
+    } else {
 
-    player.payRent(square.property);
+      console.log("Property is owned by " + square.property.owner.piece);
+
+      console.log("Rent is: \u00A3" + square.property.rent);
+      console.log("Paying rent to " + square.property.owner.piece);
+
+      player.payRent(square.property);
+    }
 
   } else if(square.type === 'tax') {
     player.money -= square.amount;

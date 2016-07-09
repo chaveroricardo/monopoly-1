@@ -1,8 +1,7 @@
-function Property(price, rental, color, numberInSet, housePrice) {
+function Property(price, rental, color, housePrice) {
   this.price = parseFloat(price);
   this.rental = rental;
   this.color = color;
-  this.numberInSet = numberInSet;
   this.houses = 0;
   this.owner = null;
   this.isMortgaged = false;
@@ -12,6 +11,12 @@ function Property(price, rental, color, numberInSet, housePrice) {
 Object.defineProperty(Property.prototype, "rent", {
   get: function getRent() {
     return this.rental[this.houses];
+  }
+});
+
+Object.defineProperty(Property.prototype, "numberInSet", {
+  get: function numberInSet() {
+    return ["brown", "darkBlue"].indexOf(this.color) === -1 ? 3 : 2;
   }
 });
 
