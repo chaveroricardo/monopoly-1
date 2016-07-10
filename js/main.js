@@ -28,9 +28,14 @@ for(var i=0;i<die.length;i++) {
 var players = document.querySelectorAll('#players .player');
 for(var i=0;i<players.length;i++) {
   players[i].onclick = function() {
-    event.preventDefault();
-    event.stopPropagation();
     this.classList.toggle("active");
+  }
+}
+
+var players = document.querySelectorAll('.title-deed');
+for(var i=0;i<players.length;i++) {
+  players[i].onclick = function() {
+    this.classList.toggle("mortgaged");
   }
 }
 

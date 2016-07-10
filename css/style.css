@@ -14,6 +14,132 @@ body {
   padding: 10px;
 }
 
+.title-deed {
+  width: 200px;
+  height: 294px;
+  text-align: center;
+  font-size: 10px;
+  margin: 5px;
+  perspective: 1000px;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.title-deed h3,
+.title-deed h4,
+.title-deed h5,
+.title-deed h6 {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.title-deed h3 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.title-deed h4 {
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.title-deed h6 {
+  font-size: 11px;
+}
+
+.title-deed .front {
+  border: 2px solid rgb(0,0,0);
+  transform: rotateY(0deg);
+  margin: 5px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+}
+
+.title-deed .back {
+  transform: rotateY(180deg);
+  background-color: rgb(231,26,35);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 5px;
+  color: rgb(255,255,255);
+}
+
+.title-deed .back h3 {
+  border: 2px solid rgb(255,255,255);
+  text-transform: uppercase;
+  font-size: 21px;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.title-deed .back h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.title-deed .back h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.title-deed .back p {
+  font-size: 11px;
+  border: 2px solid rgb(255,255,255);
+  width: calc(100% - 34px);
+  position: absolute;
+  bottom: 5px;
+  margin: 0;
+  padding: 55px 10px 20px 10px;
+}
+
+.title-deed .front, .title-deed .back {
+  padding: 5px;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.title-deed.mortgaged {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+
+.title-deed .front .header {
+  text-transform: uppercase;
+  border: 1px solid rgb(0,0,0);
+  color: rgb(255,255,255);
+}
+
+.title-deed .front .header.brown {
+  background-color: rgb(149,84,54);
+}
+
+.title-deed .front dl {
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.title-deed .front dl dt {
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
+  width: calc(100% - 80px);
+  text-align: left;
+}
+
+.title-deed .front dl dd {
+  font-size: 12px;
+  display: inline-block;
+  width: 75px;
+  margin: 0;
+  text-align: right;
+}
+
 #players {
   width: calc(100% - 1030px);
   max-width: 400px;
