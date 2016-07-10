@@ -7,6 +7,24 @@ for(var i=0;i<cards.length;i++) {
   }
 }
 
+var die = document.querySelectorAll('.die');
+for(var i=0;i<die.length;i++) {
+  die[i].onclick = function rollDice() {
+
+    for(var i=0;i<die.length;i++) {
+      (function(i) {
+        var rolls = 10;
+        while(rolls--) {
+          setTimeout(function() {
+            var randomFace = Math.ceil(Math.random() * 6);
+            die[i].className = die[i].className.replace(/show-[1-6]/, "show-" + randomFace);
+          }.bind(die[i]), 100 * rolls);
+        }
+      }(i));
+    }
+  }
+}
+
 var squares = data.map(function(dataObj) {
   var square = new Square(dataObj.name, dataObj.type || "misc");
 

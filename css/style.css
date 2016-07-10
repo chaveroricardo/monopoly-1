@@ -625,8 +625,7 @@ i.hotel:after {
   position: absolute;
   margin: 5px;
   perspective: 1000px;
-
-  transition: all 0.6s;
+  transition: all 1s;
   transform-style: preserve-3d;
 }
 
@@ -641,6 +640,7 @@ i.hotel:after {
 .card.active {
   width: 400px;
   height: 270px;
+  border-radius: 10px;
 }
 
 .card.active .front h3 {
@@ -652,6 +652,7 @@ i.hotel:after {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card .front {
@@ -667,6 +668,7 @@ i.hotel:after {
   position: absolute;
   width: 210px;
   height: 145px;
+  z-index: 2;
 }
 
 .chance-card-space {
@@ -699,4 +701,143 @@ i.hotel:after {
 
 .community-chest-card.active {
   transform: rotateY(180deg) rotateZ(-225deg) translateX(-340px) translateY(200px);
+}
+
+div.die { 
+  width: 46px; 
+  height: 46px;
+  border-radius: 5px;
+  position: absolute;
+  top: 480px;
+  -webkit-perspective: 1000px; 
+  -moz-perspective: 1000px; 
+  -o-perspective: 1000px; 
+  perspective: 1000px; 
+  margin: 0 auto 40px;
+}
+
+div.die.one {
+  left: 450px;
+}
+
+div.die.two {
+  left: 510px;
+}
+
+div.die .cube { 
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  -webkit-transform-style: preserve-3d; 
+  -moz-transform-style: preserve-3d; 
+  -o-transform-style: preserve-3d; 
+  transform-style: preserve-3d; 
+  -webkit-transform: translateZ( -25px ); 
+  -moz-transform: translateZ( -25px ); 
+  -o-transform: translateZ( -25px ); 
+  transform: translateZ( -25px ); 
+  -webkit-transition: -webkit-transform 100ms; 
+  -moz-transition: -moz-transform 100ms; 
+  -o-transition: -o-transform 100ms; 
+  transition: transform 100ms;
+}
+
+div.die .cube > div { 
+  width: 46px; 
+  height: 46px; 
+  display: block; 
+  position: absolute; 
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 4px;
+  line-height: 46px; 
+  font-size: 21px; 
+  font-weight: bold; 
+  text-align: center; 
+  margin:0px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: url(/images/dice-faces.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255,255,255);
+}
+
+div.die .cube .front  { 
+    -webkit-transform: rotateY(   0deg ) translateZ( 25px ); 
+    -moz-transform: rotateY(   0deg ) translateZ( 25px ); 
+    -o-transform: rotateY(   0deg ) translateZ( 25px ); 
+    transform: rotateY(   0deg ) translateZ( 25px );
+    background-position: 0 0;
+} 
+div.die .cube .back   { 
+    -webkit-transform: rotateX( 180deg ) translateZ( 25px ); 
+    -moz-transform: rotateX( 180deg ) translateZ( 25px ); 
+    -o-transform: rotateX( 180deg ) translateZ( 25px ); 
+    transform: rotateX( 180deg ) translateZ( 25px );
+    background-position: -258px 0; 
+} 
+div.die .cube .right  { 
+    -webkit-transform: rotateY(  90deg ) translateZ( 25px ); 
+    -moz-transform: rotateY(  90deg ) translateZ( 25px ); 
+    -o-transform: rotateY(  90deg ) translateZ( 25px ); 
+    transform: rotateY(  90deg ) translateZ( 25px );
+    background-position: -52px 0;
+} 
+div.die .cube .left   { 
+    -webkit-transform: rotateY( -90deg ) translateZ( 25px ); 
+    -moz-transform: rotateY( -90deg ) translateZ( 25px ); 
+    -o-transform: rotateY( -90deg ) translateZ( 25px ); 
+    transform: rotateY( -90deg ) translateZ( 25px );
+    background-position: -206px 0; 
+} 
+div.die .cube .top    { 
+    -webkit-transform: rotateX(  90deg ) translateZ( 25px ); 
+    -moz-transform: rotateX(  90deg ) translateZ( 25px ); 
+    -o-transform: rotateX(  90deg ) translateZ( 25px ); 
+    transform: rotateX(  90deg ) translateZ( 25px ); 
+    background-position: -103px 0;
+} 
+div.die .cube .bottom { 
+    -webkit-transform: rotateX( -90deg ) translateZ( 25px ); 
+    -moz-transform: rotateX( -90deg ) translateZ( 25px ); 
+    -o-transform: rotateX( -90deg ) translateZ( 25px ); 
+    transform: rotateX( -90deg ) translateZ( 25px );
+    background-position: -155px 0;
+}
+
+div.die.show-1 .cube  { 
+    -webkit-transform: translateZ( -25px ) rotateY(    0deg ); 
+    -moz-transform: translateZ( -25px ) rotateY(    0deg ); 
+    -o-transform: translateZ( -25px ) rotateY(    0deg ); 
+    transform: translateZ( -25px ) rotateY(    0deg ); 
+} 
+div.die.show-6 .cube   { 
+    -webkit-transform: translateZ( -25px ) rotateX( -180deg ); 
+    -moz-transform: translateZ( -25px ) rotateX( -180deg ); 
+    -o-transform: translateZ( -25px ) rotateX( -180deg ); 
+    transform: translateZ( -25px ) rotateX( -180deg ); 
+} 
+div.die.show-2 .cube  { 
+    -webkit-transform: translateZ( -25px ) rotateY(  -90deg ); 
+    -moz-transform: translateZ( -25px ) rotateY(  -90deg ); 
+    -o-transform: translateZ( -25px ) rotateY(  -90deg ); 
+    transform: translateZ( -25px ) rotateY(  -90deg ); 
+} 
+div.die.show-5 .cube   { 
+    -webkit-transform: translateZ( -25px ) rotateY(   90deg ); 
+    -moz-transform: translateZ( -25px ) rotateY(   90deg ); 
+    -o-transform: translateZ( -25px ) rotateY(   90deg ); 
+    transform: translateZ( -25px ) rotateY(   90deg ); 
+} 
+div.die.show-3 .cube    { 
+    -webkit-transform: translateZ( -25px ) rotateX(  -90deg ); 
+    -moz-transform: translateZ( -25px ) rotateX(  -90deg ); 
+    -o-transform: translateZ( -25px ) rotateX(  -90deg ); 
+    transform: translateZ( -25px ) rotateX(  -90deg ); 
+} 
+div.die.show-4 .cube { 
+    -webkit-transform: translateZ( -25px ) rotateX(   90deg ); 
+    -moz-transform: translateZ( -25px ) rotateX(   90deg ); 
+    -o-transform: translateZ( -25px ) rotateX(   90deg ); 
+    transform: translateZ( -25px ) rotateX(   90deg ); 
 }
