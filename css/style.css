@@ -104,13 +104,6 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
-.title-deed.mortgaged {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-}
-
 .title-deed .front .header {
   text-transform: uppercase;
   border: 1px solid rgb(0,0,0);
@@ -137,6 +130,7 @@ body {
 
 .title-deed .front .header.red {
   background-color: rgb(231,26,35);
+  color: rgb(255,255,255);
 }
 
 .title-deed .front .header.yellow {
@@ -149,6 +143,7 @@ body {
 
 .title-deed .front .header.dark-blue {
   background-color: rgb(0,114,187);
+  color: rgb(255,255,255);
 }
 
 .title-deed .front dl {
@@ -171,6 +166,74 @@ body {
   width: 75px;
   margin: 0;
   text-align: right;
+}
+
+.title-deed.station .header {
+  border: none;
+  background-image: url(/images/station.gif);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 100px;
+  height: 150px;
+  position: relative;
+}
+
+.title-deed.station .header h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.title-deed.station h5 {
+  text-transform: uppercase;
+}
+
+.title-deed.water-works .header {
+  border: none;
+  background-image: url(/images/water-works.gif);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 100px;
+  height: 150px;
+  position: relative;
+}
+
+.title-deed.water-works .header h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.title-deed.water-works p {
+  padding: 0 20px;
+}
+
+.title-deed.electric-company .header {
+  border: none;
+  background-image: url(/images/electric-company.gif);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 100px;
+  height: 150px;
+  position: relative;
+}
+
+.title-deed.electric-company .header h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.title-deed.electric-company p {
+  padding: 0 20px;
+}
+
+.title-deed.station .front dl dt {
+  width: calc(100% - 35px);
+}
+
+.title-deed.station .front dl dd {
+  width: 30px;
 }
 
 #players {
@@ -233,7 +296,7 @@ body {
 }
 
 #players .player.active {
-  min-height: 580px;
+  min-height: 780px;
   top: 0;
   z-index: 10;
   transition: z-index 350ms step-start, top 350ms, min-height 350ms;
@@ -242,6 +305,24 @@ body {
 #players .player .properties {
   margin-top: 10px;
   position: absolute;
+}
+
+#players .player .properties.active {
+  z-index: 10;
+}
+
+#players .player .properties .shield {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+#players .player .properties.active .shield {
+  display: block;
 }
 
 #players .player .properties.active .row > div {
@@ -269,6 +350,20 @@ body {
   -webkit-transition: z-index 350ms step-start, left 350ms, top 350ms, -webkit-transform 350ms;
   -moz-transition: z-index 350ms step-start, left: 350ms, top 350ms, -moz-transform 350ms;
   -ms-transition: z-index 350ms step-start, left: 350ms, top 350ms, -ms-transform 350ms;
+}
+
+#players .player .properties .row > div.active .title-deed.mortgaged {
+  transform: scale(1) translateX(0) translateY(0) rotateY(180deg)!important;
+  -webkit-transform: scale(1) translateX(0) translateY(0) rotateY(180deg)!important;
+  -moz-transform: scale(1) translateX(0) translateY(0) rotateY(180deg)!important;
+  -ms-transform: scale(1) translateX(0) translateY(0) rotateY(180deg)!important;
+}
+
+#players .player .properties .row > div .title-deed.mortgaged {
+  transform: scale(0.45) translateX(-60%) translateY(-60%) rotateY(180deg)!important;
+  -webkit-transform: scale(0.45) translateX(-60%) translateY(-60%) rotateY(180deg)!important;
+  -moz-transform: scale(0.45) translateX(-60%) translateY(-60%) rotateY(180deg)!important;
+  -ms-transform: scale(0.45) translateX(-60%) translateY(-60%) rotateY(180deg)!important;
 }
 
 #players .player .properties .row > div {
@@ -302,7 +397,12 @@ body {
 }
 
 #players .player .properties .row:nth-child(2) > div.active {
-  top: -210px;
+  top: -205px;
+}
+
+
+#players .player .properties .row:nth-child(3) > div.active {
+  top: -410px;
 }
 
 #players .player .properties .row > div .title-deed:nth-child(1) {
@@ -319,6 +419,10 @@ body {
   left: 0;
 }
 
+#players .player .properties .row > div .title-deed:nth-child(4) {
+  top: 90px;
+  left: 0;
+}
 
 #players .player .properties .row > div.active .title-deed:nth-child(2) {
   top: 0;
@@ -328,6 +432,11 @@ body {
 #players .player .properties .row > div.active .title-deed:nth-child(3) {
   top: 295px;
   left: 0;
+}
+
+#players .player .properties .row > div.active .title-deed:nth-child(4) {
+  top: 295px;
+  left: 200px;
 }
 
 .playing-piece {
@@ -804,7 +913,7 @@ body {
   background-color: rgb(0,114,187);
 }
 
-.station {
+.square.station {
   background-image: url(/images/station.gif);
   background-size: 80%;
   background-repeat: no-repeat;
@@ -1000,7 +1109,7 @@ i.hotel:after {
   position: absolute;
   margin: 5px;
   perspective: 1000px;
-  transition: all 1s;
+  transition: all 350ms;
   transform-style: preserve-3d;
   transform: scale(0.5) translateX(-50%) translateY(-50%);
   -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);

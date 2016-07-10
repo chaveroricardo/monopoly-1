@@ -32,11 +32,13 @@ for(var i=0;i<players.length;i++) {
   }
 }
 
-var playerProperties = document.querySelectorAll('#players .player .properties');
-for(var i=0;i<playerProperties.length;i++) {
-  playerProperties[i].onclick = function() {
+var propertyShields = document.querySelectorAll('#players .player .properties .shield');
+for(var i=0;i<propertyShields.length;i++) {
+  propertyShields[i].onclick = function() {
     event.stopPropagation();
-    this.classList.toggle("active");
+    var properties = this.parentNode;
+    properties.classList.remove("active");
+    properties.querySelector(".row > div.active").classList.remove("active")
   }
 }
 
@@ -44,11 +46,22 @@ var deedSets = document.querySelectorAll('#players .player .properties .row > di
 for(var i=0;i<deedSets.length;i++) {
   (function(deedSet){
     deedSet.onclick = function() {
+      event.stopPropagation();
       this.classList.toggle("active");
+      this.parentNode.parentNode.classList.toggle("active");
     }
   }(deedSets[i]));
 }
 
+var playerDeeds = document.querySelectorAll('#players .player .properties .row > div .title-deed');
+for(var i=0;i<playerDeeds.length;i++) {
+  playerDeeds[i].onclick = function() {
+    if(this.parentNode.classList.contains("active")) {
+      event.stopPropagation();
+      this.classList.toggle("mortgaged");
+    }
+  }
+}
 
 var pieces = ["dog","car","battleship","hat","iron","thimble","boot"];
 var squares = data.map(function(dataObj) {
