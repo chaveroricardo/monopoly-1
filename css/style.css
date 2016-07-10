@@ -10,15 +10,110 @@
 
 body {
   font-family: montserratLight, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+#players {
+  width: calc(100% - 1030px);
+  height: 1010px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+#players .player {
+  padding: 10px;
+}
+
+#players .player:nth-child(1) {
+  background-color: rgba(170,224,250,0.4);
+}
+
+#players .player:nth-child(2) {
+  background-color: rgba(231,26,35,0.4);
+}
+
+#players .player:nth-child(3) {
+  background-color: rgba(254,242,0,0.4);
+}
+
+#players .player:nth-child(4) {
+  background-color: rgba(31,178,90,0.4);
+}
+
+#players .player:nth-child(5) {
+  background-color: rgba(247,148,29,0.4);
+}
+
+#players .player:nth-child(6) {
+  background-color: rgba(0,114,187,0.4);
+}
+
+.playing-piece {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-image: url(/images/playing-pieces.gif);
+  background-size: 380%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#players .money {
+  font-size: 50px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 80px;
+  width: calc(100% - 85px);
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+#players .money:before {
+  content: '£';
+}
+
+.thimble .playing-piece {
+  background-position: 11px -5px;
+}
+
+.wheelbarrow .playing-piece {
+  background-position: -67px -5px;
+}
+
+.boot .playing-piece {
+  background-position: -147px -5px;
+}
+
+.dog .playing-piece {
+  background-position: -227px -5px;
+}
+
+.car .playing-piece {
+  background-position: -3px -97px;
+}
+
+.iron .playing-piece {
+  background-position: -78px -89px;
+}
+
+.hat .playing-piece {
+  background-position: -154px -89px;
+}
+
+.battleship .playing-piece {
+  background-position: -231px -89px;
 }
 
 #board {
   width: 1006px;
   height: 1010px;
-  margin: 0 auto;
   background-color: rgb(205,230,208);
   border: 3px solid black;
   position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .square {
