@@ -7,20 +7,20 @@ for(var i=0;i<cards.length;i++) {
   }
 }
 
-var die = document.querySelectorAll('.die');
-for(var i=0;i<die.length;i++) {
-  die[i].onclick = function rollDice() {
+var dice = document.querySelectorAll('.die');
+for(var i=0;i<dice.length;i++) {
+  dice[i].onclick = function rollDice() {
 
-    for(var i=0;i<die.length;i++) {
-      (function(i) {
+    for(var i=0;i<dice.length;i++) {
+      (function(die) {
         var rolls = 10;
         while(rolls--) {
           setTimeout(function() {
             var randomFace = Math.ceil(Math.random() * 6);
-            die[i].className = die[i].className.replace(/show-[1-6]/, "show-" + randomFace);
-          }.bind(die[i]), 100 * rolls);
+            this.className = this.className.replace(/show-[1-6]/, "show-" + randomFace);
+          }.bind(die), 100 * rolls);
         }
-      }(i));
+      }(dice[i]));
     }
   }
 }
@@ -32,12 +32,22 @@ for(var i=0;i<players.length;i++) {
   }
 }
 
-// var players = document.querySelectorAll('.title-deed');
-// for(var i=0;i<players.length;i++) {
-//   players[i].onclick = function() {
-//     this.classList.toggle("mortgaged");
-//   }
-// }
+var playerProperties = document.querySelectorAll('#players .player .properties');
+for(var i=0;i<playerProperties.length;i++) {
+  playerProperties[i].onclick = function() {
+    event.stopPropagation();
+    this.classList.toggle("active");
+  }
+}
+
+var deedSets = document.querySelectorAll('#players .player .properties .row > div');
+for(var i=0;i<deedSets.length;i++) {
+  (function(deedSet){
+    deedSet.onclick = function() {
+      this.classList.toggle("active");
+    }
+  }(deedSets[i]));
+}
 
 
 var pieces = ["dog","car","battleship","hat","iron","thimble","boot"];

@@ -195,7 +195,10 @@ body {
   width: calc(100% - 20px);
   z-index: 0;
   overflow: hidden;
-  transition: z-index 530ms step-end, top 530ms, min-height 530ms;
+  transition: z-index 350ms step-end, top 350ms, min-height 350ms;
+  -webkit-transition: z-index 350ms step-end, top 350ms, min-height 350ms;
+  -moz-transition: z-index 350ms step-end, top 350ms, min-height 350ms;
+  -ms-transition: z-index 350ms step-end, top 350ms, min-height 350ms;
 
 }
 
@@ -233,8 +236,7 @@ body {
   min-height: 580px;
   top: 0;
   z-index: 10;
-
-  transition: z-index 530ms step-start, top 530ms, min-height 530ms;
+  transition: z-index 350ms step-start, top 350ms, min-height 350ms;
 }
 
 #players .player .properties {
@@ -242,11 +244,65 @@ body {
   position: absolute;
 }
 
+#players .player .properties.active .row > div {
+  opacity: 0.3;
+}
+
+#players .player .properties.active .row > div.active {
+  opacity: 1;
+}
+
+#players .player .properties .row > div .title-deed {
+  transition: z-index 350ms step-end, left 350ms, top 350ms, transform 350ms;
+  -webkit-transition: z-index 350ms step-end, left 350ms, top 350ms, -webkit-transform 350ms;
+  -moz-transition: z-index 350ms step-end, left: 350ms, top 350ms, -moz-transform 350ms;
+  -ms-transition: z-index 350ms step-end, left: 350ms, top 350ms, -ms-transform 350ms;
+}
+
+#players .player .properties .row > div.active .title-deed {
+  transform: scale(1);
+  -webkit-transform: scale(1) translateX(0) translateY(0);
+  -moz-transform: scale(1) translateX(0) translateY(0);
+  -ms-transform: scale(1) translateX(0) translateY(0);
+  z-index: 10;
+  transition: z-index 350ms step-start, left 350ms, top 350ms, transform 350ms;
+  -webkit-transition: z-index 350ms step-start, left 350ms, top 350ms, -webkit-transform 350ms;
+  -moz-transition: z-index 350ms step-start, left: 350ms, top 350ms, -moz-transform 350ms;
+  -ms-transition: z-index 350ms step-start, left: 350ms, top 350ms, -ms-transform 350ms;
+}
+
 #players .player .properties .row > div {
   position: relative;
   display: inline-block;
   width: 90px;
   height: 200px;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  transition: left 350ms, top 350ms, opacity 350ms;
+  -webkit-transition: left 350ms, top 350ms, opacity 350ms;
+  -moz-transition: left 350ms, top 350ms, opacity 350ms;
+  -ms-transition: left 350ms, top 350ms, opacity 350ms;
+}
+
+#players .player .properties .row > div.active:nth-child(1) {
+  left: -10px;
+}
+
+#players .player .properties .row > div.active:nth-child(2) {
+  left: -100px;
+}
+
+#players .player .properties .row > div.active:nth-child(3) {
+  left: -200px;
+}
+
+#players .player .properties .row > div.active:nth-child(4) {
+  left: -300px;
+}
+
+#players .player .properties .row:nth-child(2) > div.active {
+  top: -210px;
 }
 
 #players .player .properties .row > div .title-deed:nth-child(1) {
@@ -255,10 +311,23 @@ body {
 
 #players .player .properties .row > div .title-deed:nth-child(2) {
   top: 30px;
+  left: 0;
 }
 
 #players .player .properties .row > div .title-deed:nth-child(3) {
   top: 60px;
+  left: 0;
+}
+
+
+#players .player .properties .row > div.active .title-deed:nth-child(2) {
+  top: 0;
+  left: 200px;
+}
+
+#players .player .properties .row > div.active .title-deed:nth-child(3) {
+  top: 295px;
+  left: 0;
 }
 
 .playing-piece {
