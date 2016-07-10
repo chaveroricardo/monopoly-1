@@ -533,6 +533,13 @@ body {
   transform: rotate(90deg);
 }
 
+.go {
+  background-image: url(/images/go.gif);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: 40% 40%;
+}
+
 .income-tax:before {
   content: '';
   display: block;
