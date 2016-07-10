@@ -1,5 +1,12 @@
 var pieces = ["dog","car","boat","hat","iron","cat","boot"];
 
+var cards = document.querySelectorAll('.card');
+for(var i=0;i<cards.length;i++) {
+  cards[i].onclick = function() {
+    this.classList.toggle('active');
+  }
+}
+
 var squares = data.map(function(dataObj) {
   var square = new Square(dataObj.name, dataObj.type || "misc");
 
