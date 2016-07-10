@@ -309,6 +309,7 @@ body {
 
 #players .player .properties.active {
   z-index: 10;
+  height: 100%;
 }
 
 #players .player .properties .shield {
@@ -316,7 +317,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -100px;
   left: 0;
   z-index: 5;
 }
@@ -385,7 +386,7 @@ body {
 }
 
 #players .player .properties .row > div.active:nth-child(2) {
-  left: -100px;
+  left: -105px;
 }
 
 #players .player .properties .row > div.active:nth-child(3) {
@@ -393,7 +394,7 @@ body {
 }
 
 #players .player .properties .row > div.active:nth-child(4) {
-  left: -300px;
+  left: -295px;
 }
 
 #players .player .properties .row:nth-child(2) > div.active {

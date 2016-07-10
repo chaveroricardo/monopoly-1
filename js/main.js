@@ -1,65 +1,7 @@
-// ############ EVENT HANDLERS #############
-
 var cards = document.querySelectorAll('.card');
 for(var i=0;i<cards.length;i++) {
   cards[i].onclick = function() {
     this.classList.toggle('active');
-  }
-}
-
-var dice = document.querySelectorAll('.die');
-for(var i=0;i<dice.length;i++) {
-  dice[i].onclick = function rollDice() {
-
-    for(var i=0;i<dice.length;i++) {
-      (function(die) {
-        var rolls = 10;
-        while(rolls--) {
-          setTimeout(function() {
-            var randomFace = Math.ceil(Math.random() * 6);
-            this.className = this.className.replace(/show-[1-6]/, "show-" + randomFace);
-          }.bind(die), 100 * rolls);
-        }
-      }(dice[i]));
-    }
-  }
-}
-
-var players = document.querySelectorAll('#players .player');
-for(var i=0;i<players.length;i++) {
-  players[i].onclick = function() {
-    this.classList.toggle("active");
-  }
-}
-
-var propertyShields = document.querySelectorAll('#players .player .properties .shield');
-for(var i=0;i<propertyShields.length;i++) {
-  propertyShields[i].onclick = function() {
-    event.stopPropagation();
-    var properties = this.parentNode;
-    properties.classList.remove("active");
-    properties.querySelector(".row > div.active").classList.remove("active")
-  }
-}
-
-var deedSets = document.querySelectorAll('#players .player .properties .row > div');
-for(var i=0;i<deedSets.length;i++) {
-  (function(deedSet){
-    deedSet.onclick = function() {
-      event.stopPropagation();
-      this.classList.toggle("active");
-      this.parentNode.parentNode.classList.toggle("active");
-    }
-  }(deedSets[i]));
-}
-
-var playerDeeds = document.querySelectorAll('#players .player .properties .row > div .title-deed');
-for(var i=0;i<playerDeeds.length;i++) {
-  playerDeeds[i].onclick = function() {
-    if(this.parentNode.classList.contains("active")) {
-      event.stopPropagation();
-      this.classList.toggle("mortgaged");
-    }
   }
 }
 
@@ -68,15 +10,15 @@ var squares = data.map(function(dataObj) {
   var square = new Square(dataObj.name, dataObj.type || "misc");
 
   if(dataObj.type === "property") {
-    square.property = new Property(dataObj.price, dataObj.rental, dataObj.color, dataObj.numberInSet, dataObj.housePrice);
+    square.property = new Property(dataObj.name, dataObj.price, dataObj.rental, dataObj.color, dataObj.numberInSet, dataObj.housePrice);
   }
 
   if(dataObj.type === "station") {
-    square.property = new Station();
+    square.property = new Station(dataObj.name);
   }
 
   if(dataObj.type === "utility") {
-    square.property = new Utility();
+    square.property = new Utility(dataObj.name);
   }
 
   if(dataObj.type === "tax") {
