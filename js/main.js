@@ -1,4 +1,4 @@
-var pieces = ["dog","car","boat","hat","iron","cat","boot"];
+// ############ EVENT HANDLERS #############
 
 var cards = document.querySelectorAll('.card');
 for(var i=0;i<cards.length;i++) {
@@ -25,6 +25,17 @@ for(var i=0;i<die.length;i++) {
   }
 }
 
+var players = document.querySelectorAll('#players .player');
+for(var i=0;i<players.length;i++) {
+  players[i].onclick = function() {
+    event.preventDefault();
+    event.stopPropagation();
+    this.classList.toggle("active");
+  }
+}
+
+
+var pieces = ["dog","car","battleship","hat","iron","thimble","boot"];
 var squares = data.map(function(dataObj) {
   var square = new Square(dataObj.name, dataObj.type || "misc");
 

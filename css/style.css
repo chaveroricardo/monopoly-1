@@ -16,38 +16,66 @@ body {
 
 #players {
   width: calc(100% - 1030px);
+  max-width: 400px;
   height: 1010px;
   display: inline-block;
   vertical-align: top;
   margin-right: 8px;
+  position: relative;
 }
 
 #players .player {
   padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  min-height: 80px;
+  position: absolute;
+  width: calc(100% - 20px);
+  z-index: 0;
+
+  transition: z-index 530ms step-end, top 530ms, min-height 530ms;
+
 }
 
 #players .player:nth-child(1) {
-  background-color: rgba(170,224,250,0.4);
+  background-color: rgb(218,240,250);
+  top: 0;
 }
 
 #players .player:nth-child(2) {
-  background-color: rgba(231,26,35,0.4);
+  background-color: rgb(245,163,167);
+  top: 100px;
 }
 
 #players .player:nth-child(3) {
-  background-color: rgba(254,242,0,0.4);
+  background-color: rgb(255,250,153);
+  top: 200px;
 }
 
 #players .player:nth-child(4) {
-  background-color: rgba(31,178,90,0.4);
+  background-color: rgb(165,224,189);
+  top: 300px;
 }
 
 #players .player:nth-child(5) {
-  background-color: rgba(247,148,29,0.4);
+  background-color: rgb(252,212,164);
+  top: 400px;
 }
 
 #players .player:nth-child(6) {
-  background-color: rgba(0,114,187,0.4);
+  background-color: rgb(153,198,228);
+  top: 500px;
+}
+
+#players .player.active {
+  min-height: 580px;
+  top: 0;
+  z-index: 10;
+
+  transition: z-index 530ms step-start, top 530ms, min-height 530ms;
 }
 
 .playing-piece {
