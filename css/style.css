@@ -13,24 +13,29 @@ body {
 }
 
 #board {
-  width: 1000px;
+  width: 1006px;
+  height: 1006px;
   margin: 0 auto;
   background-color: rgb(205,230,208);
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .square {
-  width: 100px;
-  height: 150px;
-  border: 3px solid black;
+  width: 80px;
+  height: 130px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  margin-right: -5px;
 }
 
 .square.corner {
-  width: 150px;
+  width: 130px;
 }
 
 .square.corner h3 {
@@ -45,13 +50,13 @@ body {
 .square h3 {
   margin: 10px 0;
   padding: 0 5px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .square h4 {
   margin: 10px 0;
-  padding: 0 5px;
-  font-size: 10px;
+  padding: 0;
+  font-size: 8px;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -129,6 +134,27 @@ body {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center 60%;
+}
+
+.income-tax:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%,-50%) rotate(45deg);
+  background-color: rgb(0,0,0);
+  top: 50%;
+  left: 50%;
+  border: 2px solid rgb(205,230,208);
+  box-shadow: 0px 0px 0px 1px rgb(0,0,0);
+}
+
+.super-tax {
+  background-image: url(/images/super-tax.gif);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center 50%;
 }
 
 i {
