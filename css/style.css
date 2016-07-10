@@ -42,8 +42,23 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%) rotate(45deg);
   margin: 0;
+}
+
+.square.corner:nth-of-type(1) h3 {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.square.corner:nth-of-type(11) h3 {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.square.corner:nth-of-type(21) h3 {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.square.corner:nth-of-type(31) h3 {
+  transform: translate(-50%,-50%) rotate(45deg);
 }
 
 .square h3 {
