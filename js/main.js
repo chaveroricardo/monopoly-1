@@ -32,12 +32,12 @@ for(var i=0;i<players.length;i++) {
   }
 }
 
-var players = document.querySelectorAll('.title-deed');
-for(var i=0;i<players.length;i++) {
-  players[i].onclick = function() {
-    this.classList.toggle("mortgaged");
-  }
-}
+// var players = document.querySelectorAll('.title-deed');
+// for(var i=0;i<players.length;i++) {
+//   players[i].onclick = function() {
+//     this.classList.toggle("mortgaged");
+//   }
+// }
 
 
 var pieces = ["dog","car","battleship","hat","iron","thimble","boot"];

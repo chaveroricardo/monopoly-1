@@ -15,14 +15,19 @@ body {
 }
 
 .title-deed {
+  position: absolute;
   width: 200px;
   height: 294px;
   text-align: center;
   font-size: 10px;
-  margin: 5px;
+  border-radius: 5px;
   perspective: 1000px;
   transition: all 1s;
   transform-style: preserve-3d;
+  transform: scale(0.45);
+  -webkit-transform: scale(0.45) translateX(-60%) translateY(-60%);
+  -moz-transform: scale(0.45) translateX(-60%) translateY(-60%);
+  -ms-transform: scale(0.45) translateX(-60%) translateY(-60%);
 }
 
 .title-deed h3,
@@ -48,11 +53,10 @@ body {
 }
 
 .title-deed .front {
-  border: 2px solid rgb(0,0,0);
   transform: rotateY(0deg);
-  margin: 5px;
-  width: calc(100% - 24px);
-  height: calc(100% - 24px);
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  background-color: rgb(255,255,255);
 }
 
 .title-deed .back {
@@ -60,7 +64,6 @@ body {
   background-color: rgb(231,26,35);
   width: calc(100% - 10px);
   height: calc(100% - 10px);
-  border-radius: 5px;
   color: rgb(255,255,255);
 }
 
@@ -111,11 +114,41 @@ body {
 .title-deed .front .header {
   text-transform: uppercase;
   border: 1px solid rgb(0,0,0);
-  color: rgb(255,255,255);
+  color: rgb(0,0,0);
 }
 
 .title-deed .front .header.brown {
   background-color: rgb(149,84,54);
+  color: rgb(255,255,255);
+}
+
+.title-deed .front .header.light-blue {
+  background-color: rgb(170,224,250);
+}
+
+.title-deed .front .header.pink {
+  background-color: rgb(217,58,150);
+  color: rgb(255,255,255);
+}
+
+.title-deed .front .header.orange {
+  background-color: rgb(247,148,29);
+}
+
+.title-deed .front .header.red {
+  background-color: rgb(231,26,35);
+}
+
+.title-deed .front .header.yellow {
+  background-color: rgb(254,242,0);
+}
+
+.title-deed .front .header.green {
+  background-color: rgb(31,178,90);
+}
+
+.title-deed .front .header.dark-blue {
+  background-color: rgb(0,114,187);
 }
 
 .title-deed .front dl {
@@ -161,7 +194,7 @@ body {
   position: absolute;
   width: calc(100% - 20px);
   z-index: 0;
-
+  overflow: hidden;
   transition: z-index 530ms step-end, top 530ms, min-height 530ms;
 
 }
@@ -202,6 +235,30 @@ body {
   z-index: 10;
 
   transition: z-index 530ms step-start, top 530ms, min-height 530ms;
+}
+
+#players .player .properties {
+  margin-top: 10px;
+  position: absolute;
+}
+
+#players .player .properties .row > div {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 200px;
+}
+
+#players .player .properties .row > div .title-deed:nth-child(1) {
+  top: 0;
+}
+
+#players .player .properties .row > div .title-deed:nth-child(2) {
+  top: 30px;
+}
+
+#players .player .properties .row > div .title-deed:nth-child(3) {
+  top: 60px;
 }
 
 .playing-piece {

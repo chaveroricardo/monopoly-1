@@ -135,7 +135,7 @@ window.data = [{
   type: "station"
 },{
   name: "Leicester Square",
-  price: 300,
+  price: 260,
   rental: [22, 110, 330, 800, 975, 1150],
   color: "yellow",
   housePrice: 150,
@@ -146,14 +146,14 @@ window.data = [{
   type: "utility"
 },{
   name: "Coventry Street",
-  price: 300,
+  price: 260,
   rental: [22, 110, 330, 800, 975, 1150],
   color: "yellow",
   housePrice: 150,
   type: "property"
 },{
   name: "Piccadilly",
-  price: 300,
+  price: 280,
   rental: [22, 120, 360, 850, 1025, 1200],
   color: "yellow",
   housePrice: 140,
@@ -162,23 +162,23 @@ window.data = [{
   name: "Go To Jail",
 },{
   name: "Regent Street",
-  price: 400,
+  price: 300,
   rental: [26, 130, 390, 900, 1100, 1275],
   color: "green",
-  housePrice: 150,
+  housePrice: 200,
   type: "property"
 },{
   name: "Oxford Street",
-  price: 400,
+  price: 300,
   rental: [26, 130, 390, 900, 1100, 1275],
   color: "green",
-  housePrice: 150,
+  housePrice: 200,
   type: "property"
 },{
   name: "Comminity Chest"
 },{
   name: "Bond Street",
-  price: 400,
+  price: 320,
   rental: [28, 150, 450, 1000, 1200, 1400],
   color: "green",
   housePrice: 200,
